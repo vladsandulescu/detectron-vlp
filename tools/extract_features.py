@@ -40,6 +40,7 @@ import timeit
 import json
 import h5py
 import itertools
+from tqdm import tqdm
 
 from utils.io import cache_url
 import utils.c2 as c2_utils
@@ -250,8 +251,11 @@ def main(args):
             valid_ids = json.load(open('/z/dat/VLP/dat/SBU/annotations/sbu_valid_jpgs.json')) # some images are broken. hard coded for now
             im_list = valid_ids.keys()
             print('number of valid SBU images {}'.format(len(im_list)))
+        elif args.dataset == 'HM':
+            im_list = [name for name in os.listdir(args.im_or_folder)]
+            print('number of valid HM images {}'.format(len(im_list)))
 
-        for i, im_name in enumerate(im_list):
+        for i, im_name in tqdm(enumerate(im_list), total=len(im_list)):
             im_base_name = os.path.basename(im_name)
             image_id = im_base_name
             if image_id[-4-len(args.proc_split):-4] == args.proc_split:

@@ -39,7 +39,7 @@ pip install -r requirements.txt
 cd $HOME/playground/hmm/lib/detectron-vlp/detectron && make
 python $HOME/playground/hmm/lib/detectron-vlp/detectron/detectron/tests/test_spatial_narrow_as_op.py
 
-cp /home/ubuntu/anaconda3/envs/detectron-vlp/lib/python2.7/site-packages/torch/lib/libcaffe2_detectron_ops_gpu.so /home/ubuntu/playground/hmm/lib/detectron-vlp/lib/
+cp $HOME/anaconda3/envs/detectron-vlp/lib/python2.7/site-packages/torch/lib/libcaffe2_detectron_ops_gpu.so $HOME/playground/hmm/lib/detectron-vlp/lib/
 
 # see https://github.com/LuoweiZhou/detectron-vlp/issues/5
 # You also need to add the detectron-vlp/lib folder to PYTHONPATH (Pycharm interpreter settings)

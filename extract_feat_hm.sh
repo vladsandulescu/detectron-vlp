@@ -16,8 +16,8 @@ python tools/extract_features.py \
     --box-output-dir /work1/paupo/playground/hmm/data_2/imgfeat/region_feat_gvd_wo_bgd/raw_bbox \
     --output-file-prefix ph2_hm_detection_vg_100dets_vlp_checkpoint_trainval \
     --max_bboxes 100 --min_bboxes 100 \
-    --cfg e2e_faster_rcnn_X-101-64x4d-FPN_2x-vlp.yaml \
-    --wts e2e_faster_rcnn_X-101-64x4d-FPN_2x-vlp.pkl \
+    --cfg /work1/paupo/playground/hmm/lib/detectron-vlp/e2e_faster_rcnn_X-101-64x4d-FPN_2x-vlp.yaml \
+    --wts /work1/paupo/playground/hmm/lib/detectron-vlp/e2e_faster_rcnn_X-101-64x4d-FPN_2x-vlp.pkl \
     --dataset HM \
     --proc_split "" \
     --image-ext png \
